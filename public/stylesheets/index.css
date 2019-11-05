@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 62.5%;
-  color: #f4f4f4;
+  color: black;
   background-color: #1d1e22;
 }
 .scrolls {
@@ -50,7 +50,7 @@ body {
   width: 100%;
   min-height: 60px;
   font-size: 1rem;
-  background-image: linear-gradient(180deg, #1d1e22, rgba(29, 30, 34, 0.1), transparent);
+  /* background-image: linear-gradient(180deg, #1d1e22, rgba(29, 30, 34, 0.1), transparent); */
   mix-blend-mode: luminosity;
 }
 .header ul {
@@ -70,7 +70,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
-  color: #f4f4f4;
+  color: black;
 }
 .header ul li a::after {
   position: absolute;
@@ -95,6 +95,7 @@ section {
   justify-content: center;
   font-size: 1rem;
   background-color: #f4f4f4;
+  color: greenyellow;
   background-image: url('../images/main.jpg');
   background-size: cover;
   scroll-snap-align: center;
@@ -104,7 +105,7 @@ section h2 {
   font-size: 3.25rem;
   font-weight: 900;
   padding: 0.5em 1em;
-  color: #1d1e22;
+  color: black;
   background-color: #f4f4f4;
   mix-blend-mode: screen;
   border-radius: 0.25em;
@@ -122,24 +123,35 @@ section:nth-child(4) {
   background-image: url('../images/dog.jpg');
 }
 
-  .social
-{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:red;
-  font-family:verdana;
-  padding:5px;
-  border-radius:5px;
-  animation:new .5s linear infinite;
-  margin-top:-50px;
+
+.price-container {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-around;
+  /* justify-content: space-between; */
 }
-.social a
-{
-  text-decoration:none;
-  color:#fff;
-  font-size:18px;
+
+/* for pricing */
+.card-body {
+  /* display: flex; */
+  background-color: red;
+  color: blue;
 }
+
+.card img {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+  
+}
+
+.card-deck {
+  width: 50%;
+}
+
+
+
 @keyframes new
 {
   0%
