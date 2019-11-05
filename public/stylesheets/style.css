@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: red;
+}
+
+/* FOOTER */
+/* Sticky Footer Classes */
+html, body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+/* Other Classes for Page Styling */
+
+body {
+  /* background: #007bff; */
+  /* background: linear-gradient(to right, #0062E6, #33AEFF); */
+}
