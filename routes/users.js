@@ -36,12 +36,11 @@ router.post('/register', (req, res) => {
   const password2 = req.body.password2;
 
   //Validation
-  req.checkBody('name', 'Put in a name bro').notEmpty()
-  req.checkBody('email','Put in a email bro').notEmpty().isEmail()
-  req.checkBody('username', 'I need a username').notEmpty()
+  req.checkBody('name', 'Name can\'t be blank').notEmpty()
+  req.checkBody('email','Insert a valid email').isEmail()
+  req.checkBody('username', "Username can't be blank").notEmpty()
   req.checkBody('password','I need a password').notEmpty()
   req.checkBody('password2','Passwords do not match').equals(req.body.password)
-
 
   const errors = req.validationErrors();
 
@@ -51,24 +50,24 @@ router.post('/register', (req, res) => {
 
     res.render('register', {errors:errors})
   } else {
-    let newUser = new username({
+    let newUser = new User({
       name: name,
       email: email,
       username: username,
       password: password
     })
 
-    User.create(newUser, (err, user) => {
+    User.createUser(newUser, (err, user) => {
       if (err) throw err;
       console.log(user);
-      
     });
 
-    req.flash('success_msg', 'You can now log in')
+    req.flash('success_msg', 'Congrats guy... You can now log in')
 
     res.redirect('/users/login')
   }
-  
 });
+
+
 
 module.exports = router;

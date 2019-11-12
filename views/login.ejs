@@ -5,6 +5,12 @@
 <h1 class="page-header">Sup This is Login Page</h1>
 <div class="testicles">
 <form method="POST" action="/users/login">
+
+  <% if (success_msg.length) { %>
+    <div class="alert alert-success"><%= success_msg %></div>
+  <% } %>
+
+
   <div class="form-group">
     <label>UserName</label>
     <input type="text" class="form-control" placeholder="Username" />
